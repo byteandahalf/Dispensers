@@ -13,7 +13,7 @@ DispenseableBlock::DispenseableBlock(const std::string& name, int blockId):
 	top = getTextureUVCoordinateSet("furnace", 3);
 }
 
-const TextureUVCoordinateSet& DispenseableBlock::getTexture(signed char, int) {
+const TextureUVCoordinateSet& DispenseableBlock::getTexture(signed char side, int data) {
 	return (side == 1 || side == 0)? top : (side == 2)? face : side;
 }
 
